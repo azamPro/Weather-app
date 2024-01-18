@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Google tag (gtag.js) -->
+    <!-- <script async src="https://www.googletagmanager.com/gtag/js?id=G-T2Q8KG0LGD"></script>
+    <script >
+        window.dataLayer = window.dataLayer || [];
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+        gtag("js", new Date());
+
+        gtag("config", "G-T2Q8KG0LGD");
+    </script> -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+    <title>Weather app</title>
+    <style>
+         body {
+            margin: 0;
+            
+            font-family: Arial, sans-serif;
+            background-color: #e0e0e0;
+        }
+        
+        #app {
+            text-align: center;
+            display: grid;
+            place-items: center;
+            height: 100vh;
+        }
+        
+        #weather-container {
+            margin-top: 20px;
+            background: #f9f9f9; /* Light grey background for the container */
+            padding: 20px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3); /* Shadow for the container */
+            border-radius: 10px; /* Rounded corners for the container */
+            text-align: center; /* Center align the text */
+            width:  clamp(300px, 70%, 1000px);
+        }
+        
+        
+        
+        
+        
+        #weather-container p {
+            background-color: rgb(25, 157, 218); /* Blue background */
+            color: #fff; /* White text color */
+            border-radius: 8px; /* Rounded corners */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4); /* Enhanced shadow */
+            margin: 10px 0; /* Margin for spacing */
+            padding: 10px 5px; /* Padding inside each paragraph */
+            border: 1px solid #ddd; /* Light border */
+        }
+        
+
+        #weather-container h2 {
+            color: #007bff;
+            margin-bottom: 15px;
+        }
+        
+        p {
+            font-size: 1.5rem;
+            line-height: 1.5;
+            margin: 10px 0;
+        }
+        
+        p span {
+            font-weight: bold;
+        }
+        #getWeatherBtn {
+            background-color: #4CAF50; /* Green background */
+            border: none;
+            color: white; /* White text */
+            padding: 15px 32px; /* Padding around the text */
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px; /* Medium font size */
+            margin: 4px 2px;
+            cursor: pointer; /* Cursor changes to a hand icon when hovered */
+            border-radius: 12px; /* Rounded corners */
+            transition: background-color 0.3s ease; /* Smooth transition for hover effect */
+        }
+        
+        #getWeatherBtn:hover {
+            background-color: #45a049; /* Darker shade of green when hovered */
+        }
+        
+        
+    </style>
+</head>
+<body>
+    
+    <div id="app">
+        <button id="getWeatherBtn">Get Your Weather</button>
+        <div id="weather-container" style="display: none;">
+            <h2>تفاصيل الطقس</h2>
+            <p id="location"></p>
+            <p id="local-time"></p>
+            <p id="temperature"></p>
+            <p id="feels-like"></p>
+            <p id="condition"></p>
+            <p id="humidity"></p>
+            <p id="wind"></p>
+            <p id="visibility"></p>
+            </div>
+    </div>
+    
+    <script src="main.js"></script>
+</body>
